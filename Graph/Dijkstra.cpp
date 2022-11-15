@@ -1,3 +1,14 @@
+/*
+Dijkstra's Algorithm Complexity
+
+Time Complexity: O(E Log V)
+
+where, E is the number of edges and V is the number of vertices.
+
+Space Complexity: O(V)
+*/
+
+
 #include<iostream>
 #include<climits>     
 using namespace std;
