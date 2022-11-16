@@ -6,7 +6,7 @@
 #define INF 99999
 
 
-void printSolution(int dist[][V]);
+void FLOYD_printSolution(int dist[][V]);
 
 void floydWarshall(int graph[][V]){
 	int dist[V][V], i, j, k;
@@ -28,7 +28,7 @@ void floydWarshall(int graph[][V]){
 }
 
 
-void printSolution(int dist[][V])
+void FLOYD_printSolution(int dist[][V])
 {
 	printf(
 		"The following matrix shows the shortest distances"
@@ -57,11 +57,11 @@ int main()
            3 
 	
 	*/
-	int graph[V][V] = { { 0, 5, INF, 10 },
+	int FLOYD_graph[V][V] = { { 0, 5, INF, 10 },
 						{ INF, 0, 3, INF },
 						{ INF, INF, 0, 1 },
 						{ INF, INF, INF, 0 } };
 
-	floydWarshall(graph);
+	floydWarshall(FLOYD_graph);
 	return 0;
 }
