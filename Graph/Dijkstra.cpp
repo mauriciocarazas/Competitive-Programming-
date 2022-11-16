@@ -1,11 +1,7 @@
 /*
-Dijkstra's Algorithm Complexity
+Dijkstra's Algorithm
 
 Time Complexity: O(E Log V)
-
-where, E is the number of edges and V is the number of vertices.
-
-Space Complexity: O(V)
 */
 
 
@@ -13,8 +9,7 @@ Space Complexity: O(V)
 #include<climits>     
 using namespace std;
 
-// this method returns a minimum distance for the 
-// vertex which is not included in Tset.
+// this method returns a minimum distance for the vertex which is not included in Tset.
 int minimumDist(int dist[], bool Tset[]) 
 {
 	int min=INT_MAX,index;
@@ -32,12 +27,10 @@ int minimumDist(int dist[], bool Tset[])
 
 void Dijkstra(int graph[6][6],int src) // adjacency matrix used is 6x6
 {
-	int dist[6]; // integer array to calculate minimum distance for each node.                            
-	bool Tset[6];// boolean array to mark visted/unvisted for each node.
+	int dist[6]; // int array to calculate minimum distance for each node.                            
+	bool Tset[6];// bool array to mark visted/unvisted 
 	
-	// set the nodes with infinity distance
-	// except for the initial node and mark
-	// them unvisited.  
+	// set the nodes with infinity distance except for the initial node and mark them unvisited.  
 	for(int i = 0; i<6; i++)
 	{
 		dist[i] = INT_MAX;
@@ -59,8 +52,8 @@ void Dijkstra(int graph[6][6],int src) // adjacency matrix used is 6x6
 	}
 	cout<<"Vertex\t\tDistance from source"<<endl;
 	for(int i = 0; i<6; i++)                      
-	{ //Printing
-		char str=65+i; // Ascii values for pritning A,B,C..
+	{ 
+		char str=65+i; // Ascii for A,B,C..
 		cout<<str<<"\t\t\t"<<dist[i]<<endl;
 	}
 }
